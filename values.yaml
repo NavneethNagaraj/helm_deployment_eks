@@ -1,0 +1,13 @@
+replicaCount: 3
+image: artisantek/useraccount:version1
+ports:
+  Port: 80
+
+serviceName: webapp-svc
+
+ingressName: myingress
+  
+annotations:
+  kubernetes.io/ingress.class: alb
+  alb.ingress.kubernetes.io/scheme: internet-facing
+  alb.ingress.kubernetes.io/target-type: instance
